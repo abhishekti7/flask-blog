@@ -1,0 +1,12 @@
+{% extends "layout.html"%}
+{% block content %}
+  <h1>Welcome.</h1>
+  {% for blog in blogs %}
+      <span> {{ blog.title }}  </span><br/>
+      <span> by - {{ blog.author }} </span><br/>
+      <span> {{ blog.content }} </span><br/>
+    <br />
+  {% endfor %}
+  <a href="/home">CLick to go back.</a>
+
+{% endblock content %}
