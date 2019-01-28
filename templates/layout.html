@@ -18,11 +18,11 @@
       <div class="container">
         <a class="navbar-brand" href="/">FlaskBlog</a>
         <ul class="navbar-nav ">
-          <li class="nav-item"><a class=" active nav-link" href="/">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="/about">Blogs</a></li>
-          <li class="nav-item"><a class="nav-link" href="/register">Sign Up</a></li>
-          <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>          
-          <li class="nav-item"><a class="nav-link" href="/contact">contact</a></li>
+          <li class="nav-item"><a class=" active nav-link" href="{{ url_for('home') }}">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('display_blogs') }}">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('register') }}">Sign Up</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('login') }}">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="{{ url_for('contact') }}">contact</a></li>
         </ul>
       </div>
     </div>
