@@ -18,7 +18,7 @@ class User(db.Model):
 	posts = db.relationship('Post',backref='author',lazy=True)
 
 	def __repr__(self):
-		return "User( {}, {}, {})".format(self.id, self.username, self.email)
+		return "User( '{}', '{}', '{}')".format(self.username, self.email, self.password)
 
 class Post(db.Model):
 	id = db.Column(db.Integer, primary_key=True)
@@ -28,7 +28,7 @@ class Post(db.Model):
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
 	def __repr__(self):
-		return "Post({}, {})".format(self.id, self.title, self.date_posted)
+		return "Post('{}', '{}')".format( self.title, self.date_posted)
 
 
 data = [
